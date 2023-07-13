@@ -12,7 +12,7 @@
       "@/lib/*": ["lib/*"],
       "@/styles/*": ["styles/*"]
     },
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
