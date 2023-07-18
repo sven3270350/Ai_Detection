@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import { ubuntu } from "@/styles/font";
 import Button from "@/components/button";
 import { public_sans } from "@/styles/font";
+import ImageWrapper from "@/components/imageWrapper";
 
 export default function Home() {
   return (
@@ -31,56 +32,55 @@ export default function Home() {
           </div>
           <div className="col-span-3"></div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-[64px]">
           <div className="w-[80%] h-[647px] bg-[#EBDBFF] bg-opacity-20 rounded-[16px] pt-[32px]">
             <div className="h-fit absolute right-[12%] top-[549px] z-20">
               <Button content="Go premium" />
             </div>
+            <div className="h-fit absolute left-[12%] top-[929px] z-20 w-[76%] flex flex-row justify-between">
+              <div className="flex flex-row items-center">
+                <Image
+                  src="/Vector.png"
+                  width="35"
+                  height="35"
+                  alt="chatgpt logo"
+                />
+                <p className={`${public_sans.className} pl-[13px] leading-[18.8px] text-[16px] text-[#A665F5] font-[700!important]`}>WAITING FOR<br />YOUR INPUT</p>
+              </div>
+              <div className="flex flex-row items-center">
+                <p className={`${public_sans.className} pr-[13px] leading-[18.8px] text-[16px] text-[#A665F5] font-[700!important]`}>0/50000 CHARACTERS</p>
+                <Image
+                  src="/Frame 211.png"
+                  width="58"
+                  height="58"
+                  alt="chatgpt logo"
+                />
+              </div>
+            </div>
             <textarea
-              className={`${public_sans.className} h-[500px] w-full bg-[#EBDBFF] rounded-[16px] focus-visible:outline-0 px-[36px] py-[39px] text-[#A665F5] text-[20px] resize-none`}
+              className={`${public_sans.className} h-[500px] w-full bg-[#EBDBFF] rounded-[16px] focus-visible:outline-0 px-[2.2%] py-[39px] text-[#A665F5] text-[20px] resize-none mb-[32px]`}
               placeholder="Enter the text you want to check for AI..."
             >
             </textarea>
+            <div className="pl-[36px] pr-[41px] flex flex-row justify-between">
+              <div className="flex flex-row">
+                <input type="checkbox" className="accent-[#EBDBFF] w-[17.35px] h-[17.35px] border after:bg-[#EBDBFF] mr-[16.65px] mt-[2.5px]" />
+                <p className={`${public_sans.className} text-[16px] text-[#EBDBFF] leading-[23.15px] pt-[-4px]`}>I agree to the Terms of service<br />(noacademic misconduct)</p>
+              </div>
+              <div className="flex flex-row">
+                <div className="h-fit mr-[17px]">
+                  <Button content="Check for AI" isOutline />
+                </div>
+                <div className="h-fit">
+                  <Button content="Humanize" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div>sdfgsdfgsdfg</div>
       </div>
-      <div>
-        <Image
-          src="/ChatGPT_logo 1.png"
-          width="150"
-          height="150"
-          alt="chatgpt logo"
-          style={{ position: "absolute", right: "15%", top: "456px" }}
-        />
-        <Image
-          src="/download (9) 1.png"
-          width="140"
-          height="140"
-          alt="chatgpt logo"
-          style={{ position: "absolute", right: "18%", top: "141px" }}
-        />
-        <Image
-          src="/jasper-ai6944.logowik 1.png"
-          width="150"
-          height="150"
-          alt="chatgpt logo"
-          style={{ position: "absolute", right: "3%", top: "236px" }}
-        />
-        <Image
-          src="/Rytr-logo 1.png"
-          width="150"
-          height="150"
-          alt="chatgpt logo"
-          style={{ position: "absolute", left: "7%", top: "456px" }}
-        />
-        <Image
-          src="/N1Cpw9hv_400x400 1.png"
-          width="89"
-          height="119"
-          alt="chatgpt logo"
-          style={{ position: "absolute", left: "0%", top: "131px" }}
-        />
-      </div>
+      <ImageWrapper />
     </div>
   );
 }
